@@ -1,7 +1,0 @@
----
-version: 2
-models:
-- name: "test__customer_orders__m_STG_PUB_PTY__main"
-  config:
-    tags:
-    - "prophecy_temp"
