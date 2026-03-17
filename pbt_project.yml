@@ -1,0 +1,150 @@
+name: toolkit_e2e_v3
+description: ''
+version: '2'
+author: ''
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2026-01-01 00:00:00'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: ''
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2026-01-01 00:00:00'
+  .prophecy/metadata/sqlmacros/prophecy_tmp_source:
+    name: prophecy_tmp_source
+    macroType: expression
+    description: null
+    author: ''
+    files:
+    - macros/prophecy_tmp_source.sql
+    - .prophecy/ide/macros/prophecy_tmp_source.json
+    createdAt: '2026-01-01 00:00:00'
+sqlSeeds: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/corebridge_source:
+    name: corebridge_source
+    description: null
+    author: ''
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2026-01-01 00:00:00'
+    tables:
+    - name: Customers
+      schema:
+        entityType: ''
+        providerType: bigquery
+        fields:
+        - name: customer_id
+          dataType:
+            type: Integer
+        - name: first_name
+          dataType:
+            type: String
+        - name: last_name
+          dataType:
+            type: String
+        - name: phone
+          dataType:
+            type: String
+        - name: email
+          dataType:
+            type: String
+        - name: country_code
+          dataType:
+            type: String
+        - name: account_open_date
+          dataType:
+            type: String
+        - name: account_flags
+          dataType:
+            type: String
+      description: null
+      author: ''
+      createdAt: '2026-01-01 00:00:00'
+      tableType: table
+    - name: Orders
+      schema:
+        entityType: ''
+        providerType: bigquery
+        fields:
+        - name: order_id
+          dataType:
+            type: Integer
+        - name: customer_id
+          dataType:
+            type: Integer
+        - name: order_status
+          dataType:
+            type: String
+        - name: order_category
+          dataType:
+            type: String
+        - name: order_date
+          dataType:
+            type: String
+        - name: amount
+          dataType:
+            type: String
+      description: null
+      author: ''
+      createdAt: '2026-01-01 00:00:00'
+      tableType: table
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: ''
+  createdAt: '2026-01-01 00:00:00'
+dependencies: []
+projectDependencies:
+  '78064':
+    projectUID: 78064
+    projectName: prophecy_basics
+    repositoryPath: gitUri=https://github.com/prophecy-io/prophecy-basics&subPath=
+    version: 1.0.7
+    isDefault: true
+    author: null
+    createdAt: '2026-01-01 00:00:00'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: false
+pipelineConfigurations: {}
+projectConfigurations: {}
+sqlOrchestratorPipelines:
+  .prophecy/metadata/sqlorchestratorpipeline/test__customer_orders__m_STG_PUB_PTY:
+    name: test__customer_orders__m_STG_PUB_PTY
+    schema: null
+    description: null
+    author: ''
+    files:
+    - pipelines/test__customer_orders__m_STG_PUB_PTY.py
+    - .prophecy/ide/pipelines/test__customer_orders__m_STG_PUB_PTY.json
+    - models/test__customer_orders__m_STG_PUB_PTY/schema.yml
+    - models/test__customer_orders__m_STG_PUB_PTY/test__customer_orders__m_STG_PUB_PTY__main.sql
+    createdAt: '2026-01-01 00:00:00'
+sqlBusinessApps: {}
